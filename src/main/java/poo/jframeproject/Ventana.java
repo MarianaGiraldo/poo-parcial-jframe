@@ -4,7 +4,6 @@ import javax.swing.ImageIcon;
 
 public class Ventana extends javax.swing.JFrame {
 
-    private javax.swing.JPanel panelTabla;
     private javax.swing.JScrollPane scrollPanel;
     private javax.swing.JTable tabla;
 
@@ -17,7 +16,6 @@ public class Ventana extends javax.swing.JFrame {
 
     private void initComponents() {
 
-        panelTabla = new javax.swing.JPanel();
         scrollPanel = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
 
@@ -26,12 +24,7 @@ public class Ventana extends javax.swing.JFrame {
 
         // Dener ejecucion al cerrar la ventana
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setSize(new java.awt.Dimension(600, 400));
-        setResizable(false);
         setTitle("Los hombres más ricos del mundo");
-
-        panelTabla.setBackground(new java.awt.Color(200, 252, 255));
-        panelTabla.setPreferredSize(new java.awt.Dimension(600, 300));
 
         tabla.setBackground(new java.awt.Color(0, 51, 51));
         tabla.setForeground(new java.awt.Color(255, 255, 255));
@@ -94,7 +87,8 @@ public class Ventana extends javax.swing.JFrame {
         add(scrollPanel);
 
         setLocationRelativeTo(null);
-        pack();
+        setSize(600,400);
+        setResizable(false);
     }
 
     public static void main(String[] args) {
