@@ -1,16 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package poo.jframeproject;
 
-/**
- *
- * @author ESTUDIANTES
- */
 public class JFrameProject {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Ventana window = new Ventana();
+        window.setVisible(true);
     }
 }

@@ -4,8 +4,6 @@ import javax.swing.ImageIcon;
 
 public class Ventana extends javax.swing.JFrame {
 
-    private javax.swing.JLabel tituloTabla;
-    private javax.swing.JPanel panelTitulo;
     private javax.swing.JPanel panelTabla;
     private javax.swing.JScrollPane scrollPanel;
     private javax.swing.JTable tabla;
@@ -19,13 +17,10 @@ public class Ventana extends javax.swing.JFrame {
 
     private void initComponents() {
 
-        panelTitulo = new javax.swing.JPanel();
-        tituloTabla = new javax.swing.JLabel();
         panelTabla = new javax.swing.JPanel();
         scrollPanel = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
 
-        setLocationRelativeTo(null);
         ImageIcon icono = new ImageIcon("unal.png");
         setIconImage(icono.getImage());
 
@@ -33,19 +28,8 @@ public class Ventana extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(600, 400));
         setResizable(false);
+        setTitle("Los hombres más ricos del mundo");
 
-        panelTitulo.setBackground(new java.awt.Color(255, 229, 188));
-
-        tituloTabla.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 15));
-        tituloTabla.setForeground(new java.awt.Color(0, 0, 0));
-        tituloTabla.setText("Lista de algo");
-        tituloTabla.setAlignmentY(0.0F);
-        tituloTabla.setSize(new java.awt.Dimension(86, 14));
-
-        javax.swing.GroupLayout layoutTitulo = new javax.swing.GroupLayout(panelTitulo);
-        panelTitulo.setLayout(layoutTitulo);
-
-        add(tituloTabla);
         panelTabla.setBackground(new java.awt.Color(200, 252, 255));
         panelTabla.setPreferredSize(new java.awt.Dimension(600, 300));
 
@@ -65,7 +49,8 @@ public class Ventana extends javax.swing.JFrame {
                         { 10, "Larry Ellison", 84, "Oracle", "EE. UU.", 77 },
                         { 11, "Steve Ballmer", 77, "Microsoft", "EE. UU.", 65 },
                         { 12, "Francoise Bettencourt-Meyers", 73, "L'Oreal", "Francia", 68 },
-                        { 13, "Zhong Shanshan", 71, "Nongfu Spring, Wantai Pharma", "China", 67 },
+                        { 13, "Zhong Shanshan", 71, "Nongfu Spring, Wantai Pharma", "China",
+                                67 },
                         { 14, "Amancio Ortega", 70, "Inditex (Zara)", "España", 85 },
                         { 15, "Alice Walton", 67, "Walmart", "EE. UU.", 72 },
                         { 16, "Jim Walton", 66, "Walmart", "EE. UU.", 73 },
@@ -82,32 +67,36 @@ public class Ventana extends javax.swing.JFrame {
                         { 27, "Jack Ma", 58, "Alibaba", "China", 57 },
                         { 28, "Wang Xing", 57, "Meituan", "China", 42 },
                         { 29, "Hui Ka Yan", 56, "Evergrande Group", "China", 63 },
-                        { 30, "Beate Heister & Karl Albrecht Jr.", 55, "Aldi Nord, Trader Joe's", "Alemania", null }
+                        { 30, "Beate Heister & Karl Albrecht Jr.", 55,
+                                "Aldi Nord, Trader Joe's", "Alemania", null }
                 },
                 new String[] {
-                        "#", "Nombre", "Riqueza (Miles de Millones de Dólares)", "Empresa", "Nacionalidad", "Edad"
+                        "#", "Nombre", "Riqueza (Miles de Millones de Dólares)", "Empresa",
+                        "Nacionalidad", "Edad"
                 }));
         tabla.setCellSelectionEnabled(false);
         tabla.setGridColor(new java.awt.Color(165, 206, 206));
         tabla.setName("Tabla");
         tabla.setRowHeight(25);
         tabla.setDragEnabled(false);
-        
+        tabla.getColumnModel().getColumn(0).setPreferredWidth(30);
+        tabla.getColumnModel().getColumn(1).setPreferredWidth(200);
+        tabla.getColumnModel().getColumn(2).setPreferredWidth(300);
+        tabla.getColumnModel().getColumn(3).setPreferredWidth(200);
+        tabla.getColumnModel().getColumn(4).setPreferredWidth(150);
+        tabla.getColumnModel().getColumn(5).setPreferredWidth(100);
+        tabla.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+
         tabla.setShowGrid(true);
         tabla.setEnabled(false);
         scrollPanel.setViewportView(tabla);
 
-        javax.swing.GroupLayout layoutTabla = new javax.swing.GroupLayout(panelTabla);
-        panelTabla.setLayout(layoutTabla);
         add(scrollPanel);
-        
 
+        setLocationRelativeTo(null);
         pack();
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         Ventana window = new Ventana();
         window.setVisible(true);
