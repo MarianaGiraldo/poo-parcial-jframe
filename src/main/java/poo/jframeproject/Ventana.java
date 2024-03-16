@@ -98,7 +98,7 @@ public class Ventana extends javax.swing.JFrame {
                         { 30, "Beate Heister & Karl Albrecht Jr.", 55, "Aldi Nord, Trader Joe's", "Alemania", null }
                 },
                 new String[] {
-                        "Número", "Nombre", "Title 3", "Title 4", "Title 5", "Title 6"
+                        "#", "Nombre", "Riqueza (Miles de Millones de Dólares)", "Empresa", "Nacionalidad", "Edad"
                 }));
         tabla.setCellSelectionEnabled(false);
         tabla.setGridColor(new java.awt.Color(165, 206, 206));
