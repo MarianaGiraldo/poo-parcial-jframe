@@ -1,5 +1,7 @@
 package poo.jframeproject;
 
+import javax.swing.ImageIcon;
+
 public class Ventana extends javax.swing.JFrame {
 
     /**
@@ -16,6 +18,10 @@ public class Ventana extends javax.swing.JFrame {
         panelTabla = new javax.swing.JPanel();
         scrollPanel = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
+
+        setLocationRelativeTo(null);
+        ImageIcon icono = new ImageIcon("unal.png");
+        setIconImage(icono.getImage());
 
         // Dener ejecucion al cerrar la ventana
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -72,38 +78,38 @@ public class Ventana extends javax.swing.JFrame {
         ));
         tabla.setCellSelectionEnabled(true);
         tabla.setGridColor(new java.awt.Color(165, 206, 206));
-        tabla.setName("Tabla"); // NOI18N
+        tabla.setName("Tabla");
         tabla.setRowHeight(25);
         tabla.setShowGrid(true);
         scrollPanel.setViewportView(tabla);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(panelTabla);
-        panelTabla.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout layoutTabla = new javax.swing.GroupLayout(panelTabla);
+        panelTabla.setLayout(layoutTabla);
+        layoutTabla.setHorizontalGroup(
+            layoutTabla.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layoutTabla.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(scrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        layoutTabla.setVerticalGroup(
+            layoutTabla.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layoutTabla.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(scrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout layoutTituloTabla = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layoutTituloTabla);
+        layoutTituloTabla.setHorizontalGroup(
+            layoutTituloTabla.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(panelTabla, javax.swing.GroupLayout.DEFAULT_SIZE, 447, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        layoutTituloTabla.setVerticalGroup(
+            layoutTituloTabla.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layoutTituloTabla.createSequentialGroup()
                 .addComponent(panelTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(panelTabla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
