@@ -44,21 +44,8 @@ public class Ventana extends javax.swing.JFrame {
 
         javax.swing.GroupLayout layoutTitulo = new javax.swing.GroupLayout(panelTitulo);
         panelTitulo.setLayout(layoutTitulo);
-        layoutTitulo.setHorizontalGroup(
-                layoutTitulo.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layoutTitulo.createSequentialGroup()
-                                .addGap(180, 180, 180)
-                                .addComponent(tituloTabla, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(170, 170, 170)));
-        layoutTitulo.setVerticalGroup(
-                layoutTitulo.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layoutTitulo.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addComponent(tituloTabla, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(27, 27, 27)));
 
+        add(tituloTabla);
         panelTabla.setBackground(new java.awt.Color(200, 252, 255));
         panelTabla.setPreferredSize(new java.awt.Dimension(600, 300));
 
@@ -104,43 +91,16 @@ public class Ventana extends javax.swing.JFrame {
         tabla.setGridColor(new java.awt.Color(165, 206, 206));
         tabla.setName("Tabla");
         tabla.setRowHeight(25);
+        tabla.setDragEnabled(false);
+        
         tabla.setShowGrid(true);
         tabla.setEnabled(false);
         scrollPanel.setViewportView(tabla);
 
         javax.swing.GroupLayout layoutTabla = new javax.swing.GroupLayout(panelTabla);
         panelTabla.setLayout(layoutTabla);
-        layoutTabla.setHorizontalGroup(
-                layoutTabla.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layoutTabla.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(scrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                                .addContainerGap()));
-        layoutTabla.setVerticalGroup(
-                layoutTabla.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layoutTabla.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(scrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 262,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(26, Short.MAX_VALUE)));
-
-        javax.swing.GroupLayout layoutTituloTabla = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layoutTituloTabla);
-        layoutTituloTabla.setHorizontalGroup(
-                layoutTituloTabla.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(panelTitulo, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(panelTabla, javax.swing.GroupLayout.DEFAULT_SIZE, 447, Short.MAX_VALUE));
-        layoutTituloTabla.setVerticalGroup(
-                layoutTituloTabla.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layoutTituloTabla.createSequentialGroup()
-                                .addComponent(panelTitulo, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(panelTabla, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap()));
+        add(scrollPanel);
+        
 
         pack();
     }
